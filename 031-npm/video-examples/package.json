@@ -1,0 +1,7 @@
+{
+    "type": "module",
+    "scripts": {
+        "list": "ls",
+        "hello": "echo 'hello there! :)'"
+    }
+}
