@@ -86,7 +86,7 @@ class Rectangle extends Shape {
   }
 }
 
-const square = new Square();
+const square = new Square("blue", 5);
 const rectangle = new Rectangle("red", 5, 6);
 console.log(square.area()); // 25
 console.log(rectangle.area()); // 30
