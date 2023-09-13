@@ -35,17 +35,17 @@ class Student {
   }
 
   gpa() {
-    let averageGrade = 0;
-    for (const grade of this.grades) {
-      averageGrade += grade;
+    if (this.grades.length === 0) {
+      return 0;
     }
-    return averageGrade / this.grades.length;
+    const total = this.grades.reduce((accumulator, currentGrade) => accumulator + currentGrade, 0);
+    return total / this.grades.length;
   }
 }
 
 const eva = new Student("Eva", "Arts", [95, 75, 83]);
-console.log(eva);
 
-console.log(eva.gpa());
-eva.addGrade(89);
-console.log(eva.gpa());
+console.log(eva); 
+
+const evaAverageGrade = eva.gpa();
+console.log(`Eva's average grade: ${evaAverageGrade.toFixed(2)}`); 
